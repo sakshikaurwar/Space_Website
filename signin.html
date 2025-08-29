@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feedback Form</title>
+  <style>
+    /* === CSS STYLING === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      width: 400px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 2px solid #fff;
+      border-radius: 5px;
+      background: #333;
+      color: #fff;
+      font-size: 1em;
+    }
+
+    input[type="submit"] {
+      background-color: #00d2ff;
+      border: none;
+      color: #000;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #009fd9;
+    }
+
+    .feedback {
+      margin-top: 30px;
+      font-size: 1.2em;
+      color: #ffeb3b;
+    }
+
+    .user-details {
+      background-color: #111;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+
+    .user-details p {
+      font-size: 1.1em;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Feedback Form</h1>
+    <form id="feedbackForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="comments" placeholder="Your Comments" rows="5" required></textarea>
+      <input type="submit" value="Submit" />
+    </form>
+
+    <div id="userFeedback" class="feedback" style="display:none;">
+      <h2>Thank you for your feedback, <span id="userName"></span>!</h2>
+      <div class="user-details">
+        <p><strong>Name:</strong> <span id="displayName"></span></p>
+        <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+        <p><strong>Comments:</strong> <span id="displayComments"></span></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript to handle form submission and display user data
+    const form = document.getElementById('feedbackForm');
+    const userFeedback = document.getElementById('userFeedback');
+    const userName = document.getElementById('userName');
+    const displayName = document.getElementById('displayName');
+    const displayEmail = document.getElementById('displayEmail');
+    const displayComments = document.getElementById('displayComments');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form from refreshing page
+      
+      // Get user input
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const comments = document.getElementById('comments').value;
+
+      // Display user feedback
+      userName.textContent = name;
+      displayName.textContent = name;
+      displayEmail.textContent = email;
+      displayComments.textContent = comments;
+      
+      // Hide form and show feedback
+      form.style.display = 'none';
+      userFeedback.style.display = 'block';
+    });
+  </script>
+
+</body>
+</html>

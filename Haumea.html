@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Haumea - The Dwarf Planet in the Kuiper Belt</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0d0d0d;
+      color: #f5f5f5;
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    header h1 {
+      font-size: 3em;
+      color: #e0e0e0;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #bbbbbb;
+    }
+
+    .top-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 30px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .image-container {
+      flex: 1 1 400px;
+      max-width: 400px;
+    }
+
+    .image-container img {
+      width: 80%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      background-color: #1a1a1a;
+    }
+
+    .quick-facts {
+      flex: 1 1 300px;
+      max-width: 500px;
+    }
+
+    .quick-facts h2 {
+      color: #90b6b0;
+      margin-bottom: 10px;
+    }
+
+    .quick-facts ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .quick-facts ul li::before {
+      content: "🪐 ";
+      color: #90b6b0;
+    }
+
+    .about-section {
+      max-width: 800px;
+      margin: 40px auto 20px;
+      padding: 20px;
+    }
+
+    .about-section h2 {
+      color: #90b6b0;
+    }
+
+    button {
+      display: block;
+      margin: 30px auto 10px;
+      padding: 12px 25px;
+      background-color: #90b6b0;
+      color: #000;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      border-radius: 30px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #7f9a97;
+    }
+
+    #factBox {
+      text-align: center;
+      margin-top: 10px;
+      color: #cccccc;
+      font-style: italic;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #666;
+      padding-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Haumea</h1>
+    <p>The Dwarf Planet in the Kuiper Belt</p>
+  </header>
+
+  <section class="top-section">
+    <div class="image-container">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWMvpZXeFqRMQJ9bdBBNvc2wqOT6Cm9BF0Sw&s" alt="Haumea Dwarf Planet">
+    </div>
+    <div class="quick-facts">
+      <h2>Quick Facts</h2>
+      <ul>
+        <li><strong>Type:</strong> Dwarf Planet</li>
+        <li><strong>Diameter:</strong> 1,632 km (long axis)</li>
+        <li><strong>Distance from Sun:</strong> ~6.5 billion km</li>
+        <li><strong>Orbital Period:</strong> 283 Earth years</li>
+        <li><strong>Length of Day:</strong> 3.9 hours</li>
+        <li><strong>Surface Temp:</strong> ~ -241°C</li>
+        <li><strong>Moons:</strong> 2 known (Hi'iaka and Namaka)</li>
+        <li><strong>Atmosphere:</strong> Extremely thin</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <h2>About Haumea</h2>
+    <p>
+      Haumea is a dwarf planet located in the Kuiper Belt, and is one of the fastest rotating large objects in the solar system. It was discovered in 2004 and named after the Hawaiian goddess of fertility and childbirth.
+    </p>
+    <p>
+      Haumea has an unusual elongated shape due to its rapid rotation, which causes it to flatten at the poles. The dwarf planet also has two moons, Hi'iaka and Namaka, which are thought to have been formed from the debris of a large collision.
+    </p>
+
+    <button onclick="showFact()">Click for a Fun Fact!</button>
+    <div id="factBox"></div>
+  </section>
+
+  <footer>
+    © 2025 Haumea Explorer | Discover the Dwarf Planet in the Kuiper Belt 🌌
+  </footer>
+
+  <script>
+    const facts = [
+      "Haumea's rapid rotation causes it to be an oblate spheroid, with a long axis of 1,632 km.",
+      "Haumea is one of the fastest rotating large objects in the solar system, completing one full rotation in only 3.9 hours.",
+      "Haumea's two moons, Hi'iaka and Namaka, were likely formed from the debris of a collision.",
+      "Haumea is located in the Kuiper Belt, a region populated with icy bodies beyond Neptune.",
+      "Haumea is named after the Hawaiian goddess of fertility and childbirth."
+    ];
+
+    function showFact() {
+      const fact = facts[Math.floor(Math.random() * facts.length)];
+      document.getElementById('factBox').textContent = fact;
+    }
+  </script>
+
+</body>
+</html>

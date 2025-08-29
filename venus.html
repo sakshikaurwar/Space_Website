@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Venus - Earth's Twin Planet</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0d0d0d;
+      color: #f5f5f5;
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    header h1 {
+      font-size: 3em;
+      color: #e0e0e0;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #bbbbbb;
+    }
+
+    .top-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 30px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .image-container {
+      flex: 1 1 400px;
+      max-width: 400px;
+    }
+
+    .image-container img {
+      width: 80%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      background-color: #1a1a1a;
+    }
+
+    .quick-facts {
+      flex: 1 1 300px;
+      max-width: 500px;
+    }
+
+    .quick-facts h2 {
+      color: #ffc107;
+      margin-bottom: 10px;
+    }
+
+    .quick-facts ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .quick-facts ul li::before {
+      content: "🪐 ";
+      color: #ffc107;
+    }
+
+    .about-section {
+      max-width: 800px;
+      margin: 40px auto 20px;
+      padding: 20px;
+    }
+
+    .about-section h2 {
+      color: #ffc107;
+    }
+
+    button {
+      display: block;
+      margin: 30px auto 10px;
+      padding: 12px 25px;
+      background-color: #ffc107;
+      color: #000;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      border-radius: 30px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e6ac00;
+    }
+
+    #factBox {
+      text-align: center;
+      margin-top: 10px;
+      color: #cccccc;
+      font-style: italic;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #666;
+      padding-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Venus</h1>
+    <p>The Hottest Planet in the Solar System</p>
+  </header>
+
+  <section class="top-section">
+    <div class="image-container">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Venus-real_color.jpg" alt="Venus Planet">
+    </div>
+    <div class="quick-facts">
+      <h2>Quick Facts</h2>
+      <ul>
+        <li><strong>Type:</strong> Terrestrial Planet</li>
+        <li><strong>Diameter:</strong> 12,104 km</li>
+        <li><strong>Distance from Sun:</strong> ~108 million km</li>
+        <li><strong>Orbital Period:</strong> 225 Earth days</li>
+        <li><strong>Length of Day:</strong> 243 Earth days (retrograde)</li>
+        <li><strong>Surface Temp:</strong> ~465°C</li>
+        <li><strong>Moons:</strong> None</li>
+        <li><strong>Atmosphere:</strong> Thick, CO₂ and sulfuric acid</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <h2>About Venus</h2>
+    <p>
+      Venus is the second planet from the Sun and is often called Earth’s twin due to its similar size and mass. However, the planet is incredibly inhospitable, with a dense atmosphere composed mostly of carbon dioxide, and surface temperatures hot enough to melt lead.
+    </p>
+    <p>
+      Venus spins in the opposite direction to most planets and has a very slow rotation. It has no moons or rings. The thick atmosphere traps heat in a runaway greenhouse effect, making it the hottest planet in the Solar System.
+    </p>
+
+    <button onclick="showFact()">Click for a Fun Fact!</button>
+    <div id="factBox"></div>
+  </section>
+
+  <footer>
+    © 2025 Venus Explorer | Discover Earth's Mysterious Twin 🌕
+  </footer>
+
+  <script>
+    const facts = [
+      "Venus is hotter than Mercury, even though it's farther from the Sun.",
+      "A day on Venus is longer than its year!",
+      "Venus rotates backwards compared to most planets.",
+      "It has mountains, valleys, and thousands of volcanoes.",
+      "The pressure on Venus is 92 times that of Earth."
+    ];
+
+    function showFact() {
+      const fact = facts[Math.floor(Math.random() * facts.length)];
+      document.getElementById('factBox').textContent = fact;
+    }
+  </script>
+
+</body>
+</html>

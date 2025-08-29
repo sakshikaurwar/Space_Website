@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jupiter - The Giant of the Solar System</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0d0d0d;
+      color: #f5f5f5;
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    header h1 {
+      font-size: 3em;
+      color: #e0e0e0;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #bbbbbb;
+    }
+
+    .top-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 30px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .image-container {
+      flex: 1 1 400px;
+      max-width: 400px;
+    }
+
+    .image-container img {
+      width: 80%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      background-color: #1a1a1a;
+    }
+
+    .quick-facts {
+      flex: 1 1 300px;
+      max-width: 500px;
+    }
+
+    .quick-facts h2 {
+      color: #ff9900;
+      margin-bottom: 10px;
+    }
+
+    .quick-facts ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .quick-facts ul li::before {
+      content: "🪐 ";
+      color: #ff9900;
+    }
+
+    .about-section {
+      max-width: 800px;
+      margin: 40px auto 20px;
+      padding: 20px;
+    }
+
+    .about-section h2 {
+      color: #ff9900;
+    }
+
+    button {
+      display: block;
+      margin: 30px auto 10px;
+      padding: 12px 25px;
+      background-color: #ff9900;
+      color: #000;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      border-radius: 30px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e68a00;
+    }
+
+    #factBox {
+      text-align: center;
+      margin-top: 10px;
+      color: #cccccc;
+      font-style: italic;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #666;
+      padding-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Jupiter</h1>
+    <p>The Giant of the Solar System</p>
+  </header>
+
+  <section class="top-section">
+    <div class="image-container">
+      <img src="https://cdn.esahubble.org/archives/images/screen/heic1708a.jpg" alt="Jupiter Planet">
+    </div>
+    <div class="quick-facts">
+      <h2>Quick Facts</h2>
+      <ul>
+        <li><strong>Type:</strong> Gas Giant</li>
+        <li><strong>Diameter:</strong> 139,820 km</li>
+        <li><strong>Distance from Sun:</strong> ~778 million km</li>
+        <li><strong>Orbital Period:</strong> 11.86 Earth years</li>
+        <li><strong>Length of Day:</strong> 9 hours, 56 minutes</li>
+        <li><strong>Surface Temp:</strong> ~-108°C</li>
+        <li><strong>Moons:</strong> 79 known (largest is Ganymede)</li>
+        <li><strong>Atmosphere:</strong> Hydrogen, helium</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <h2>About Jupiter</h2>
+    <p>
+      Jupiter is the fifth planet from the Sun and the largest in our solar system. It’s a gas giant composed mostly of hydrogen and helium, with a vast storm system, including the Great Red Spot, which is larger than Earth and has been raging for hundreds of years.
+    </p>
+    <p>
+      Jupiter has 79 known moons, with Ganymede being the largest moon in the entire solar system. Its powerful magnetic field and rapid rotation contribute to extreme weather patterns, including intense winds and storms.
+    </p>
+
+    <button onclick="showFact()">Click for a Fun Fact!</button>
+    <div id="factBox"></div>
+  </section>
+
+  <footer>
+    © 2025 Jupiter Explorer | Explore the Giant of the Solar System 🌟
+  </footer>
+
+  <script>
+    const facts = [
+      "Jupiter's Great Red Spot is a massive storm that has lasted for over 350 years.",
+      "Jupiter has 79 moons, with Ganymede being the largest.",
+      "A day on Jupiter is only about 10 hours long!",
+      "Jupiter is so large, it could fit over 1,300 Earths inside it.",
+      "Jupiter's magnetic field is 14 times stronger than Earth's."
+    ];
+
+    function showFact() {
+      const fact = facts[Math.floor(Math.random() * facts.length)];
+      document.getElementById('factBox').textContent = fact;
+    }
+  </script>
+
+</body>
+</html>

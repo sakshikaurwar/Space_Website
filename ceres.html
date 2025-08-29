@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ceres - The Dwarf Planet in the Asteroid Belt</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0d0d0d;
+      color: #f5f5f5;
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    header h1 {
+      font-size: 3em;
+      color: #e0e0e0;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #bbbbbb;
+    }
+
+    .top-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 30px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .image-container {
+      flex: 1 1 400px;
+      max-width: 500px;
+    }
+
+    .image-container img {
+      width: 80%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      background-color: #1a1a1a;
+    }
+
+    .quick-facts {
+      flex: 1 1 300px;
+      max-width: 500px;
+    }
+
+    .quick-facts h2 {
+      color: #a8d8e5;
+      margin-bottom: 10px;
+    }
+
+    .quick-facts ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .quick-facts ul li::before {
+      content: "🪐 ";
+      color: #a8d8e5;
+    }
+
+    .about-section {
+      max-width: 800px;
+      margin: 40px auto 20px;
+      padding: 20px;
+    }
+
+    .about-section h2 {
+      color: #a8d8e5;
+    }
+
+    button {
+      display: block;
+      margin: 30px auto 10px;
+      padding: 12px 25px;
+      background-color: #a8d8e5;
+      color: #000;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      border-radius: 30px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #7dbac8;
+    }
+
+    #factBox {
+      text-align: center;
+      margin-top: 10px;
+      color: #cccccc;
+      font-style: italic;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #666;
+      padding-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Ceres</h1>
+    <p>The Dwarf Planet in the Asteroid Belt</p>
+  </header>
+
+  <section class="top-section">
+    <div class="image-container">
+      <img src="https://solarsystem.nasa.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBa3dSIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--734a4ec775027919cf2bd5bdf3399b299e8d92cf/ceres_th.jpg?disposition=inline" alt="Ceres Dwarf Planet">
+    </div>
+    <div class="quick-facts">
+      <h2>Quick Facts</h2>
+      <ul>
+        <li><strong>Type:</strong> Dwarf Planet</li>
+        <li><strong>Diameter:</strong> 940 km</li>
+        <li><strong>Distance from Sun:</strong> ~413 million km</li>
+        <li><strong>Orbital Period:</strong> 4.60 Earth years</li>
+        <li><strong>Length of Day:</strong> 9 hours, 4 minutes</li>
+        <li><strong>Surface Temp:</strong> ~ -105°C</li>
+        <li><strong>Moons:</strong> 0 (Ceres has no moons)</li>
+        <li><strong>Atmosphere:</strong> Trace amounts of water vapor</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <h2>About Ceres</h2>
+    <p>
+      Ceres is the largest object in the asteroid belt between Mars and Jupiter. It was discovered by Giuseppe Piazzi in 1801 and was initially classified as a planet before being reclassified as a dwarf planet by the International Astronomical Union in 2006.
+    </p>
+    <p>
+      Ceres is unique among dwarf planets because it shows signs of water ice on its surface and possibly subsurface liquid water. NASA’s Dawn spacecraft studied Ceres closely and revealed intriguing features such as bright spots on its surface, which are believed to be deposits of salts or ice.
+    </p>
+
+    <button onclick="showFact()">Click for a Fun Fact!</button>
+    <div id="factBox"></div>
+  </section>
+
+  <footer>
+    © 2025 Ceres Explorer | Discover the Dwarf Planet in the Asteroid Belt 🌌
+  </footer>
+
+  <script>
+    const facts = [
+      "Ceres is the largest object in the asteroid belt between Mars and Jupiter.",
+      "Ceres has a surface covered in water ice and may have liquid water beneath its surface.",
+      "Ceres was the first dwarf planet to be visited by a spacecraft (NASA's Dawn mission).",
+      "The surface of Ceres has bright spots that may be deposits of salt or ice.",
+      "Ceres was discovered in 1801 by Giuseppe Piazzi."
+    ];
+
+    function showFact() {
+      const fact = facts[Math.floor(Math.random() * facts.length)];
+      document.getElementById('factBox').textContent = fact;
+    }
+  </script>
+
+</body>
+</html>

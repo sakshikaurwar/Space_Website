@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Makemake - The Dwarf Planet in the Kuiper Belt</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0d0d0d;
+      color: #f5f5f5;
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    header h1 {
+      font-size: 3em;
+      color: #e0e0e0;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #bbbbbb;
+    }
+
+    .top-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 30px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .image-container {
+      flex: 1 1 400px;
+      max-width: 400px;
+    }
+
+    .image-container img {
+      width: 80%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      background-color: #1a1a1a;
+    }
+
+    .quick-facts {
+      flex: 1 1 300px;
+      max-width: 500px;
+    }
+
+    .quick-facts h2 {
+      color: #ffdf59;
+      margin-bottom: 10px;
+    }
+
+    .quick-facts ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .quick-facts ul li::before {
+      content: "🪐 ";
+      color: #ffdf59;
+    }
+
+    .about-section {
+      max-width: 800px;
+      margin: 40px auto 20px;
+      padding: 20px;
+    }
+
+    .about-section h2 {
+      color: #ffdf59;
+    }
+
+    button {
+      display: block;
+      margin: 30px auto 10px;
+      padding: 12px 25px;
+      background-color: #ffdf59;
+      color: #000;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      border-radius: 30px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #f0c240;
+    }
+
+    #factBox {
+      text-align: center;
+      margin-top: 10px;
+      color: #cccccc;
+      font-style: italic;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #666;
+      padding-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Makemake</h1>
+    <p>The Dwarf Planet in the Kuiper Belt</p>
+  </header>
+
+  <section class="top-section">
+    <div class="image-container">
+      <img src="https://theplanets.org/123/2021/11/Dwarf-Planet-Makemake.png" alt="makemake planet">
+    </div>
+    <div class="quick-facts">
+      <h2>Quick Facts</h2>
+      <ul>
+        <li><strong>Type:</strong> Dwarf Planet</li>
+        <li><strong>Diameter:</strong> 1,430 km</li>
+        <li><strong>Distance from Sun:</strong> ~6.8 billion km</li>
+        <li><strong>Orbital Period:</strong> 309 Earth years</li>
+        <li><strong>Length of Day:</strong> ~22.5 hours</li>
+        <li><strong>Surface Temp:</strong> ~ -239°C</li>
+        <li><strong>Moons:</strong> 1 known (MK 2)</li>
+        <li><strong>Atmosphere:</strong> Extremely thin, possibly methane</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <h2>About Makemake</h2>
+    <p>
+      Makemake is a dwarf planet in the outer regions of the solar system, discovered in 2005. It is located in the Kuiper Belt, a region beyond Neptune that is populated with icy bodies and dwarf planets. Makemake is one of the largest known objects in the Kuiper Belt.
+    </p>
+    <p>
+      Unlike Pluto, Makemake has a very cold and dry environment. It has one known moon, MK 2, and a highly elliptical orbit that takes it far from the Sun. Makemake was named after the creator god of the Rapa Nui people of Easter Island.
+    </p>
+
+    <button onclick="showFact()">Click for a Fun Fact!</button>
+    <div id="factBox"></div>
+  </section>
+
+  <footer>
+    © 2025 Makemake Explorer | Discover the Dwarf Planet in the Kuiper Belt 🌌
+  </footer>
+
+  <script>
+    const facts = [
+      "Makemake was discovered in 2005 by a team led by Michael Brown.",
+      "Makemake is named after the creator god of the Rapa Nui people of Easter Island.",
+      "Makemake's surface is extremely cold and dry, with temperatures around -239°C.",
+      "Makemake is one of the largest objects in the Kuiper Belt.",
+      "Makemake's moon, MK 2, was discovered in 2016."
+    ];
+
+    function showFact() {
+      const fact = facts[Math.floor(Math.random() * facts.length)];
+      document.getElementById('factBox').textContent = fact;
+    }
+  </script>
+
+</body>
+</html>

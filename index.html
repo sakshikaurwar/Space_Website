@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planets</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Planets of the Solar System</h1>
+    
+    <div class="section">
+        <h2>Inner Planets</h2>
+        <div class="gallery">
+            <div class="planet" onclick="openPlanetPage('mercury')">
+                <img src="https://cdn.mos.cms.futurecdn.net/w3kqDGBSTqVnNTpd5pajWm-1200-80.jpg" alt="Mercury">
+                <div class="planet-name">Mercury</div>
+            </div>
+            <div class="planet" onclick="openPlanetPage('venus')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Venus-real_color.jpg" alt="Venus">
+                <div class="planet-name">Venus</div>
+            </div>
+            <div class="planet" onclick="openPlanetPage('earth')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg" alt="Earth">
+                <div class="planet-name">Earth</div>
+            </div>
+            <div class="planet" onclick="openPlanetPage('mars')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/OSIRIS_Mars_true_color.jpg" alt="Mars">
+                <div class="planet-name">Mars</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Outer Planets</h2>
+        <div class="gallery">
+            <div class="planet" onclick="openPlanetPage('jupiter')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Jupiter.jpg" alt="Jupiter">
+                <div class="planet-name">Jupiter</div>
+            </div>
+            <div class="planet" onclick="openPlanetPage('saturn')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Saturn_during_Equinox.jpg" alt="Saturn">
+                <div class="planet-name">Saturn</div>
+            </div>
+            <div class="planet" onclick="openPlanetPage('uranus')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Uranus2.jpg" alt="Uranus">
+                <div class="planet-name">Uranus</div>
+            </div>
+            <div class="planet" onclick="openPlanetPage('neptune')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Neptune_Full.jpg" alt="Neptune">
+                <div class="planet-name">Neptune</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Dwarf Planets</h2>
+        <div class="gallery">
+            <div class="planet" onclick="openPlanetPage('pluto')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Nh-pluto-in-true-color_2x_JPEG-edit-frame.jpg" alt="Pluto">
+                <div class="planet-name">Pluto</div>
+            </div>
+            <div class="planet" onclick="openPlanetPage('ceres')">
+                <img src="https://solarsystem.nasa.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBa3dSIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--734a4ec775027919cf2bd5bdf3399b299e8d92cf/ceres_th.jpg?disposition=inline" alt="Ceres">
+                <div class="planet-name">Ceres</div>
+            </div>
+            <div class="planet" onclick="openPlanetPage('eris')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTaPJBJVyOHSkL0mAY-4N8gVnZNuGN3MmB0Q&s" alt="Eris">
+                <div class="planet-name">Eris</div>
+            </div>
+            <div class="planet" onclick="openPlanetPage('Makemake')">
+                <img src="https://solarsystem.nasa.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdGdRIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bafc1c2e2e76668d8d156de3505a8f7e472e790a/makemake_th.jpg?disposition=inline" alt="Makemake">
+                <div class="planet-name">Makemake</div>
+            </div>
+            <div class="planet" onclick="openPlanetPage('Haumea')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUlEPLrZ5zl2mwFKix5aUMIyQv_MCds6btRg&s" alt="Haumea">
+                <div class="planet-name">Haumea</div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function openPlanetPage(planetName) {
+            window.location.href = planetName + ".html";
+        }
+    </script>
+</body>
+</html>

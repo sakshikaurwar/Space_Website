@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Saturn - The Ringed Giant</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0d0d0d;
+      color: #f5f5f5;
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    header h1 {
+      font-size: 3em;
+      color: #e0e0e0;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #bbbbbb;
+    }
+
+    .top-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 30px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .image-container {
+      flex: 1 1 400px;
+      max-width: 400px;
+    }
+
+    .image-container img {
+      width: 80%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      background-color: #1a1a1a;
+    }
+
+    .quick-facts {
+      flex: 1 1 300px;
+      max-width: 500px;
+    }
+
+    .quick-facts h2 {
+      color: #fcd440;
+      margin-bottom: 10px;
+    }
+
+    .quick-facts ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .quick-facts ul li::before {
+      content: "🪐 ";
+      color: #fcd440;
+    }
+
+    .about-section {
+      max-width: 800px;
+      margin: 40px auto 20px;
+      padding: 20px;
+    }
+
+    .about-section h2 {
+      color: #fcd440;
+    }
+
+    button {
+      display: block;
+      margin: 30px auto 10px;
+      padding: 12px 25px;
+      background-color: #fcd440;
+      color: #000;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      border-radius: 30px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e6be2d;
+    }
+
+    #factBox {
+      text-align: center;
+      margin-top: 10px;
+      color: #cccccc;
+      font-style: italic;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #666;
+      padding-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Saturn</h1>
+    <p>The Ringed Giant of the Solar System</p>
+  </header>
+
+  <section class="top-section">
+    <div class="image-container">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Saturn_during_Equinox.jpg" alt="Saturn Planet">
+    </div>
+    <div class="quick-facts">
+      <h2>Quick Facts</h2>
+      <ul>
+        <li><strong>Type:</strong> Gas Giant</li>
+        <li><strong>Diameter:</strong> 116,460 km</li>
+        <li><strong>Distance from Sun:</strong> ~1.43 billion km</li>
+        <li><strong>Orbital Period:</strong> 29.5 Earth years</li>
+        <li><strong>Length of Day:</strong> ~10.7 hours</li>
+        <li><strong>Surface Temp:</strong> ~-139°C</li>
+        <li><strong>Moons:</strong> 145+ (largest is Titan)</li>
+        <li><strong>Atmosphere:</strong> Hydrogen, helium</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <h2>About Saturn</h2>
+    <p>
+      Saturn is the sixth planet from the Sun and the second-largest in our solar system. It's best known for its magnificent ring system, made of ice and rock particles. Despite its size, Saturn is the least dense planet — it would float in water!
+    </p>
+    <p>
+      Saturn has a fast rotation, giving it a flattened appearance at the poles. It hosts dozens of moons, including Titan, which has a thick atmosphere and liquid methane lakes. Saturn's atmosphere features strong winds and massive storms.
+    </p>
+
+    <button onclick="showFact()">Click for a Fun Fact!</button>
+    <div id="factBox"></div>
+  </section>
+
+  <footer>
+    © 2025 Saturn Explorer | Explore the Ringed Giant 🪐
+  </footer>
+
+  <script>
+    const facts = [
+      "Saturn’s rings are over 280,000 km wide, but only about 10 meters thick!",
+      "Titan, Saturn’s moon, is bigger than Mercury.",
+      "Saturn could float in water because it's so light for its size.",
+      "It has the most moons in the solar system (over 145).",
+      "Its winds can reach speeds of 1,800 km/h."
+    ];
+
+    function showFact() {
+      const fact = facts[Math.floor(Math.random() * facts.length)];
+      document.getElementById('factBox').textContent = fact;
+    }
+  </script>
+
+</body>
+</html>

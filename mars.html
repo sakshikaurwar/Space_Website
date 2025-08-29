@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mars - The Red Planet</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #f5f5f5;
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    header h1 {
+      font-size: 3em;
+      color: #e0e0e0;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #bbbbbb;
+    }
+
+    .top-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 30px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .image-container {
+      flex: 1 1 400px;
+      max-width: 400px;
+    }
+
+    .image-container img {
+      width: 80%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      background-color: #1a1a1a;
+    }
+
+    .quick-facts {
+      flex: 1 1 300px;
+      max-width: 500px;
+    }
+
+    .quick-facts h2 {
+      color: #ff5733;
+      margin-bottom: 10px;
+    }
+
+    .quick-facts ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .quick-facts ul li::before {
+      content: "🪐 ";
+      color: #ff5733;
+    }
+
+    .about-section {
+      max-width: 800px;
+      margin: 40px auto 20px;
+      padding: 20px;
+    }
+
+    .about-section h2 {
+      color: #ff5733;
+    }
+
+    button {
+      display: block;
+      margin: 30px auto 10px;
+      padding: 12px 25px;
+      background-color: #ff5733;
+      color: #000;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      border-radius: 30px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e04b27;
+    }
+
+    #factBox {
+      text-align: center;
+      margin-top: 10px;
+      color: #cccccc;
+      font-style: italic;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #666;
+      padding-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Mars</h1>
+    <p>The Red Planet of Our Solar System</p>
+  </header>
+
+  <section class="top-section">
+    <div class="image-container">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/OSIRIS_Mars_true_color.jpg" alt="Mars Planet">
+    </div>
+    <div class="quick-facts">
+      <h2>Quick Facts</h2>
+      <ul>
+        <li><strong>Type:</strong> Terrestrial Planet</li>
+        <li><strong>Diameter:</strong> 6,779 km</li>
+        <li><strong>Distance from Sun:</strong> ~228 million km</li>
+        <li><strong>Orbital Period:</strong> 687 Earth days</li>
+        <li><strong>Length of Day:</strong> 24.6 hours</li>
+        <li><strong>Surface Temp:</strong> -125°C to 20°C</li>
+        <li><strong>Moons:</strong> 2 (Phobos & Deimos)</li>
+        <li><strong>Atmosphere:</strong> Thin, mostly carbon dioxide</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <h2>About Mars</h2>
+    <p>
+      Mars is the fourth planet from the Sun and is known as the Red Planet due to its reddish appearance caused by iron oxide (rust) on its surface. It's a rocky world with mountains, valleys, and the largest volcano in the solar system, Olympus Mons.
+    </p>
+    <p>
+      Mars has two small moons and a thin atmosphere, which makes it prone to extreme temperature swings. Scientists are deeply interested in Mars as it may have once supported life, and it is the most explored planet after Earth.
+    </p>
+
+    <button onclick="showFact()">Click for a Fun Fact!</button>
+    <div id="factBox"></div>
+  </section>
+
+  <footer>
+    © 2025 Mars Explorer | Explore the Red Planet 🪐
+  </footer>
+
+  <script>
+    const facts = [
+      "Mars has the tallest volcano in the solar system: Olympus Mons.",
+      "A Martian year is 687 Earth days long.",
+      "Mars experiences dust storms that can engulf the whole planet.",
+      "The gravity on Mars is about 38% of Earth's gravity.",
+      "Mars has polar ice caps made of water and dry ice (frozen CO₂)."
+    ];
+
+    function showFact() {
+      const fact = facts[Math.floor(Math.random() * facts.length)];
+      document.getElementById('factBox').textContent = fact;
+    }
+  </script>
+
+</body>
+</html>

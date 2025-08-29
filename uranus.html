@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Uranus - The Ice Giant</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0d0d0d;
+      color: #f5f5f5;
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    header h1 {
+      font-size: 3em;
+      color: #e0e0e0;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #bbbbbb;
+    }
+
+    .top-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 30px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .image-container {
+      flex: 1 1 400px;
+      max-width: 400px;
+    }
+
+    .image-container img {
+      width: 80%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      background-color: #1a1a1a;
+    }
+
+    .quick-facts {
+      flex: 1 1 300px;
+      max-width: 500px;
+    }
+
+    .quick-facts h2 {
+      color: #66ffff;
+      margin-bottom: 10px;
+    }
+
+    .quick-facts ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .quick-facts ul li::before {
+      content: "🪐 ";
+      color: #66ffff;
+    }
+
+    .about-section {
+      max-width: 800px;
+      margin: 40px auto 20px;
+      padding: 20px;
+    }
+
+    .about-section h2 {
+      color: #66ffff;
+    }
+
+    button {
+      display: block;
+      margin: 30px auto 10px;
+      padding: 12px 25px;
+      background-color: #66ffff;
+      color: #000;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      border-radius: 30px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #4ddddd;
+    }
+
+    #factBox {
+      text-align: center;
+      margin-top: 10px;
+      color: #cccccc;
+      font-style: italic;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #666;
+      padding-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Uranus</h1>
+    <p>The Tilted Ice Giant of the Solar System</p>
+  </header>
+
+  <section class="top-section">
+    <div class="image-container">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Uranus2.jpg" alt="Uranus Planet">
+    </div>
+    <div class="quick-facts">
+      <h2>Quick Facts</h2>
+      <ul>
+        <li><strong>Type:</strong> Ice Giant</li>
+        <li><strong>Diameter:</strong> 50,724 km</li>
+        <li><strong>Distance from Sun:</strong> ~2.9 billion km</li>
+        <li><strong>Orbital Period:</strong> 84 Earth years</li>
+        <li><strong>Length of Day:</strong> 17 hours, 14 minutes</li>
+        <li><strong>Surface Temp:</strong> ~-224°C</li>
+        <li><strong>Moons:</strong> 27 known</li>
+        <li><strong>Atmosphere:</strong> Hydrogen, helium, methane</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <h2>About Uranus</h2>
+    <p>
+      Uranus is the seventh planet from the Sun and one of the most unique in our solar system. It's an ice giant with a pale blue color due to methane in its atmosphere. Unlike other planets, Uranus rotates on its side, with its axis tilted over 90 degrees.
+    </p>
+    <p>
+      It has a cold atmosphere, faint rings, and at least 27 moons named after characters from literature. The planet was first discovered in 1781 by William Herschel, making it the first planet found with a telescope.
+    </p>
+
+    <button onclick="showFact()">Click for a Fun Fact!</button>
+    <div id="factBox"></div>
+  </section>
+
+  <footer>
+    © 2025 Uranus Explorer | Discover the Ice Giant ❄️
+  </footer>
+
+  <script>
+    const facts = [
+      "Uranus rotates on its side — it’s tilted at about 98 degrees!",
+      "It was the first planet discovered with a telescope (in 1781).",
+      "A year on Uranus lasts 84 Earth years.",
+      "Uranus has faint rings — 13 in total.",
+      "Its atmosphere is the coldest in the solar system."
+    ];
+
+    function showFact() {
+      const fact = facts[Math.floor(Math.random() * facts.length)];
+      document.getElementById('factBox').textContent = fact;
+    }
+  </script>
+
+</body>
+</html>

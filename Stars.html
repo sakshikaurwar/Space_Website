@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Famous Stars in the Sky</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      /* background-color: #0c0c2c; */
+      background:linear-gradient(to right, #0f2027, #203a43, #2c5364) ;
+      color: #fff;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #f4e842;
+    }
+
+    .about {
+      max-width: 900px;
+      margin: 0 auto 50px auto;
+      background-color: black;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+
+    .about p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #ddd;
+    }
+
+    .star-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+    .star-card {
+      background-color:black;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+      transition: transform 0.3s;
+    }
+
+    .star-card:hover {
+      transform: scale(1.03);
+    }
+
+    .star-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .star-content {
+      padding: 15px;
+    }
+
+    .star-content h2 {
+      margin-top: 0;
+      font-size: 1.2em;
+      color: #1e90ff;
+    }
+
+    .star-content p {
+      font-size: 0.95em;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌌 Explore Stars</h1>
+
+  <div class="about">
+    <h2>What Are Stars?</h2>
+    <p>Stars are gigantic spheres of glowing gas, mostly hydrogen and helium, that generate energy through nuclear fusion in their cores. This process releases light and heat, which is why stars shine. They come in many types and sizes — from tiny red dwarfs to massive blue giants. A star's color tells us its temperature: blue stars are hottest, and red stars are coolest.</p>
+    <p>Stars are born in stellar nurseries called nebulae, live for millions to billions of years, and then die in dramatic ways — sometimes as white dwarfs, neutron stars, or black holes. Our Sun is a typical yellow star and has been burning for about 4.6 billion years.</p>
+    <p>The night sky is filled with stars of different brightness and colors. Some, like Polaris, help with navigation. Others, like Betelgeuse, are studied for signs of cosmic explosions. Each star tells a story of our universe's past and future.</p>
+  </div>
+
+  <h2>✨ Stars</h2>
+
+  <div class="star-grid">
+
+    <!-- 10 star cards (same as previous version, unchanged for brevity) -->
+
+    <div class="star-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Solar_sys8.jpg" alt="Sun">
+      <div class="star-content">
+        <h2>Sun</h2>
+        <p>Our local star. It's a G-type main-sequence star, providing energy that supports life on Earth.</p>
+      </div>
+    </div>
+
+    <div class="star-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlXEMRuYSAj6PfspIZ_WLPEaGCU9yACxIhOQ&s" alt="Sirius">
+      <div class="star-content">
+        <h2>Sirius</h2>
+        <p>The brightest star in the night sky, located in Canis Major, about 8.6 light-years away.</p>
+      </div>
+    </div>
+
+    <div class="star-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3klJAtADx8Hb3FPVf44kIpQzHRQeqwVq6nw&s" alt="Betelgeuse">
+      <div class="star-content">
+        <h2>Betelgeuse</h2>
+        <p>A massive red supergiant in Orion. It's so big it could engulf the orbit of Mars if placed in our solar system.</p>
+      </div>
+    </div>
+
+    <div class="star-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1vAbwBgaIEhJCOqwONT_p8sfKwRi4Hy6TRA&s" alt="Rigel">
+      <div class="star-content">
+        <h2>Rigel</h2>
+        <p>A blue supergiant and the brightest star in the Orion constellation. It’s over 100,000 times brighter than the Sun.</p>
+      </div>
+    </div>
+
+    <div class="star-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn-4vKQG4LC-jOd1xpJKQEfME4j8S7LuRqJA&s" alt="Polaris">
+      <div class="star-content">
+        <h2>Polaris</h2>
+        <p>The North Star, aligned with Earth's axis. It remains nearly fixed in the night sky.</p>
+      </div>
+    </div>
+
+    <div class="star-card">
+      <img src="https://cdn.mos.cms.futurecdn.net/fpkcGfVHtKWEgYSJBfg69h-1200-80.jpg" alt="Alpha Centauri">
+      <div class="star-content">
+        <h2>Alpha Centauri</h2>
+        <p>The closest star system to us, it consists of three stars including Proxima Centauri.</p>
+      </div>
+    </div>
+
+    <div class="star-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/New_shot_of_Proxima_Centauri%2C_our_nearest_neighbour.jpg" alt="Proxima Centauri">
+      <div class="star-content">
+        <h2>Proxima Centauri</h2>
+        <p>The closest known individual star to the Sun. It's a red dwarf that may have habitable planets.</p>
+      </div>
+    </div>
+
+    <div class="star-card">
+      <img src="https://cdn.britannica.com/30/126230-004-D416E13D/Vega-Spitzer-Space-Telescope.jpg" alt="Vega">
+      <div class="star-content">
+        <h2>Vega</h2>
+        <p>A bright white-blue star in the constellation Lyra. It was once Earth’s North Star.</p>
+      </div>
+    </div>
+
+    <div class="star-card">
+      <img src="https://www.star-facts.com/wp-content/uploads/2019/10/Aldebaran-star.webp" alt="Aldebaran">
+      <div class="star-content">
+        <h2>Aldebaran</h2>
+        <p>Known as the "Eye of the Bull" in Taurus, Aldebaran is an orange giant star about 65 light-years away.</p>
+      </div>
+    </div>
+
+    <div class="star-card">
+      <img src="https://cdn.eso.org/images/screen/eso1726a.jpg" alt="Antares">
+      <div class="star-content">
+        <h2>Antares</h2>
+        <p>A red supergiant in Scorpius, Antares is one of the largest and most luminous stars visible from Earth.</p>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

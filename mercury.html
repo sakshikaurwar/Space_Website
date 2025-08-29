@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mercury - The Closest Planet to the Sun</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background:linear-gradient(to right, #0f2027, #203a43, #2c5364) ;
+      color: #f5f5f5;
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    header h1 {
+      font-size: 3em;
+      color: #e0e0e0;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #bbbbbb;
+    }
+
+    .top-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 30px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .image-container {
+      flex: 1 1 400px;
+      max-width: 400px;
+    }
+
+    .image-container img {
+      width: 80%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      background-color: #1a1a1a;
+    }
+
+    .quick-facts {
+      flex: 1 1 300px;
+      max-width: 500px;
+    }
+
+    .quick-facts h2 {
+      color: #ffcc00;
+      margin-bottom: 10px;
+    }
+
+    .quick-facts ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .quick-facts ul li::before {
+      content: "🪐 ";
+      color: #ffcc00;
+    }
+
+    .about-section {
+      max-width: 800px;
+      margin: 40px auto 20px;
+      padding: 20px;
+    }
+
+    .about-section h2 {
+      color: #ffcc00;
+    }
+
+    button {
+      display: block;
+      margin: 30px auto 10px;
+      padding: 12px 25px;
+      background-color: #ffcc00;
+      color: #000;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      border-radius: 30px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e6b800;
+    }
+
+    #factBox {
+      text-align: center;
+      margin-top: 10px;
+      color: #cccccc;
+      font-style: italic;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #666;
+      padding-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Mercury</h1>
+    <p>The Smallest and Fastest Planet in Our Solar System</p>
+  </header>
+
+  <section class="top-section">
+    <div class="image-container">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Mercury_in_true_color.jpg" alt="Mercury Planet">
+    </div>
+    <div class="quick-facts">
+      <h2>Quick Facts</h2>
+      <ul>
+        <li><strong>Type:</strong> Terrestrial Planet</li>
+        <li><strong>Diameter:</strong> 4,879 km</li>
+        <li><strong>Distance from Sun:</strong> ~58 million km</li>
+        <li><strong>Orbital Period:</strong> 88 Earth days</li>
+        <li><strong>Length of Day:</strong> 59 Earth days</li>
+        <li><strong>Surface Temp:</strong> -173°C to 427°C</li>
+        <li><strong>Moons:</strong> None</li>
+        <li><strong>Atmosphere:</strong> Very thin (Exosphere)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <h2>About Mercury</h2>
+    <p>
+      Mercury is the closest planet to the Sun and the smallest in the Solar System. It’s just slightly larger than Earth's Moon. Mercury has a solid, rocky surface covered with craters and has no moons or rings. Because it has almost no atmosphere, temperatures fluctuate drastically between day and night.
+    </p>
+    <p>
+      Despite being nearest to the Sun, it's not the hottest planet (Venus is hotter due to its thick atmosphere). Mercury’s core makes up a large portion of its interior and it has a weak magnetic field. NASA’s MESSENGER mission helped scientists learn a lot about this tiny planet.
+    </p>
+
+    <button onclick="showFact()">Click for a Fun Fact!</button>
+    <div id="factBox"></div>
+  </section>
+
+  <footer>
+    © 2025 Mercury Explorer | Learn more about our solar system 🌌
+  </footer>
+
+  <script>
+    const facts = [
+      "Mercury has no moons or rings.",
+      "A day on Mercury (sunrise to sunrise) is 176 Earth days!",
+      "It has the most elliptical orbit of all the planets.",
+      "Mercury is the second densest planet after Earth.",
+      "NASA’s MESSENGER orbited Mercury over 4,000 times!"
+    ];
+
+    function showFact() {
+      const fact = facts[Math.floor(Math.random() * facts.length)];
+      document.getElementById('factBox').textContent = fact;
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Neptune - The Windy Blue Giant</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0d0d0d;
+      color: #f5f5f5;
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    header h1 {
+      font-size: 3em;
+      color: #e0e0e0;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #bbbbbb;
+    }
+
+    .top-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 30px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .image-container {
+      flex: 1 1 400px;
+      max-width: 400px;
+    }
+
+    .image-container img {
+      width: 80%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      background-color: #1a1a1a;
+    }
+
+    .quick-facts {
+      flex: 1 1 300px;
+      max-width: 500px;
+    }
+
+    .quick-facts h2 {
+      color: #3399ff;
+      margin-bottom: 10px;
+    }
+
+    .quick-facts ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .quick-facts ul li::before {
+      content: "🌀 ";
+      color: #3399ff;
+    }
+
+    .about-section {
+      max-width: 800px;
+      margin: 40px auto 20px;
+      padding: 20px;
+    }
+
+    .about-section h2 {
+      color: #3399ff;
+    }
+
+    button {
+      display: block;
+      margin: 30px auto 10px;
+      padding: 12px 25px;
+      background-color: #3399ff;
+      color: #000;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      border-radius: 30px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #2d88e6;
+    }
+
+    #factBox {
+      text-align: center;
+      margin-top: 10px;
+      color: #cccccc;
+      font-style: italic;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #666;
+      padding-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Neptune</h1>
+    <p>The Farthest Planet and Wind King of the Solar System</p>
+  </header>
+
+  <section class="top-section">
+    <div class="image-container">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Neptune_Full.jpg" alt="Neptune Planet">
+    </div>
+    <div class="quick-facts">
+      <h2>Quick Facts</h2>
+      <ul>
+        <li><strong>Type:</strong> Ice Giant</li>
+        <li><strong>Diameter:</strong> 49,244 km</li>
+        <li><strong>Distance from Sun:</strong> ~4.5 billion km</li>
+        <li><strong>Orbital Period:</strong> 165 Earth years</li>
+        <li><strong>Length of Day:</strong> 16 hours</li>
+        <li><strong>Surface Temp:</strong> ~-214°C</li>
+        <li><strong>Moons:</strong> 14 (largest is Triton)</li>
+        <li><strong>Atmosphere:</strong> Hydrogen, helium, methane</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <h2>About Neptune</h2>
+    <p>
+      Neptune is the eighth and farthest known planet in our solar system. It's an ice giant with deep blue coloring due to methane in its atmosphere. Known for its violent storms and supersonic winds, Neptune is one of the windiest places in the solar system.
+    </p>
+    <p>
+      The planet was discovered in 1846 and is about 17 times the mass of Earth. Its largest moon, Triton, orbits in the opposite direction and may have been a captured object. Neptune has faint rings and extreme seasonal variations due to its 165-year-long orbit.
+    </p>
+
+    <button onclick="showFact()">Click for a Fun Fact!</button>
+    <div id="factBox"></div>
+  </section>
+
+  <footer>
+    © 2025 Neptune Explorer | Dive into the Deep Blue Giant 🌊
+  </footer>
+
+  <script>
+    const facts = [
+      "Neptune has winds faster than 2,000 km/h — the fastest in the solar system.",
+      "It has a storm system known as the Great Dark Spot.",
+      "A year on Neptune lasts 165 Earth years!",
+      "Triton, Neptune’s moon, has geysers and retrograde orbit.",
+      "Voyager 2 is the only spacecraft to visit Neptune (1989)."
+    ];
+
+    function showFact() {
+      const fact = facts[Math.floor(Math.random() * facts.length)];
+      document.getElementById('factBox').textContent = fact;
+    }
+  </script>
+
+</body>
+</html>
